@@ -60,18 +60,6 @@ class SingleLinkedList():
             current_node = current_node.next
         return
 
-# 初始化节点对象
-node1 = ListNode(15)
-node2 = ListNode(8.2)
-node3 = ListNode('Berlin')
-node4 = ListNode(15)
-track = SingleLinkedList()
-print("track length: %i" % track.list_length())
-for current_item in [node1,node2,node3,node4]:
-    track.add_list_item(current_item)
-    print("track length: %i" % track.list_length())
-    track.output_list()
-
     # 查询列表
     def unordered_search(self,value):
         current_node = self.head
@@ -100,6 +88,17 @@ for current_item in [node1,node2,node3,node4]:
             previous_node = current_node
             current_node = current_node.next
 
+# 初始化节点对象
+node1 = ListNode(15)
+node2 = ListNode(8.2)
+node3 = ListNode('Berlin')
+node4 = ListNode(15)
+track = SingleLinkedList()
+print("track length: %i" % track.list_length())
+for current_item in [node1,node2,node3,node4]:
+    track.add_list_item(current_item)
+    print("track length: %i" % track.list_length())
+    track.output_list()
 
 
 
