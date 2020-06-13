@@ -41,21 +41,21 @@ class Tree:
 
     def frontRecursion(self,root):
         if root is not None:
-            print(root.elem,)
+            print(root.elem)
             self.frontRecursion(root.l_child)
             self.frontRecursion(root.r_child)
 
     def midRecursion(self,root):
         if root is not None:
             self.midRecursion(root.l_child)
-            print(root.elem,)
+            print(root.elem)
             self.midRecursion(root.r_child)
 
     def laterRecursion(self,root):
         if root is not None:
             self.laterRecursion(root.l_child)
             self.laterRecursion(root.r_child)
-            print(root.elem,)
+            print(root.elem)
 
 tree = Tree()
 for elem in range(10):

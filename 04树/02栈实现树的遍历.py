@@ -54,7 +54,7 @@ class Tree(object):
             while node or stack:
                 # 从根节点开始，一直找它的左子树
                 while node:
-                    print(node.elem,)
+                    print(node.elem)
                     stack.append(node)
                     node = node.l_child
                 # while结束表示当前节点node为空，即前一个节点没有左子树了
@@ -74,7 +74,7 @@ class Tree(object):
                     node = node.l_child
                 # while结束表示当前节点node为空，即前一个节点没有左子树了
                 node = stack.pop()
-                print(node.elem,)
+                print(node.elem)
                 # 查看右子树
                 node = node.r_child
 
@@ -95,7 +95,7 @@ class Tree(object):
                 stack2.append(node)
             # 将stack2中的元素出栈，即为后序遍历次序
             while stack2:
-                print(stack2.pop().elem,)
+                print(stack2.pop().elem)
 
 # 生成十个数据作为树节点
 elements = range(10)
@@ -103,8 +103,11 @@ tree = Tree()
 for elem in elements:
     tree.add_node(elem)
 print("---------------先序遍历-------------------")
-print(tree.frontStack(tree.root))
+# print(tree.frontStack(tree.root))
+tree.frontStack(tree.root)
 print("---------------中序遍历-------------------")
-print(tree.midStack(tree.root))
+# print(tree.midStack(tree.root))
+tree.midStack(tree.root)
 print("---------------后序遍历-------------------")
-print(tree.laterStack(tree.root))
+# print(tree.laterStack(tree.root))
+tree.laterStack(tree.root)
